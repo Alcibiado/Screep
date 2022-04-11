@@ -17,14 +17,14 @@ module.exports.loop = function () {
     console.log('Harvesters: ' + harvesters.length);
     console.log('Upgraders ' + upgraders.length);
     console.log('Builders' + builders.length);
-    if(builders.length < 1) {
+    if(builders.length < 2) {
         var newName = 'Builder' + Game.time;
         console.log('Spawning new builder: ' + newName);
         Game.spawns['Spawn_Adol'].spawnCreep([WORK,CARRY,MOVE], newName, 
             {memory: {role: 'builder'}});
     }
     
-     if(upgraders.length < 14) {
+     if(upgraders.length < 13) {
         var newName = 'Upgrader' + Game.time;
         console.log('Spawning new upgrader: ' + newName);
         Game.spawns['Spawn_Adol'].spawnCreep([WORK,CARRY,MOVE], newName, 
